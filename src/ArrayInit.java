@@ -1,0 +1,22 @@
+//: initialization/ArrayInit.java
+// Инициализация массивов
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
+public class ArrayInit {
+    public static void main(String[] args) {
+        Integer[] a = {
+                new Integer(1),
+                new Integer(2),
+                3 // Autoboxing
+        };
+        Integer[] b = new Integer[]{
+                new Integer(1),
+                new Integer(2),
+                3, // Автоматическая упаковка
+        };
+        System.out.println(Arrays.toString(a));
+        System.out.println(Arrays.toString(b));
+    }
+}

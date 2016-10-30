@@ -6,7 +6,7 @@ class Gizmo {
     public void spin() {}
 }
 
-public class FinalArgument {
+public class FinalArguments {
     void with(final Gizmo g) {
         //! g = new Gizmo(); // запрещено -- g обьявлено final
         g.spin();
@@ -23,8 +23,8 @@ public class FinalArgument {
     }
 
     public static void main(String[] args) {
-        FinalArgument bf = new FinalArgument();
-        bf.without(null);
-        bf.with(null);
+        FinalArguments bf = new FinalArguments();
+        bf.without(new Gizmo());
+        bf.with(new Gizmo());
     }
 }

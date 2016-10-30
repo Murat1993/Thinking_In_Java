@@ -6,7 +6,7 @@ package initialization;
 
 class Rock {
     Rock() {
-        System.out.println("Rock ");
+        System.out.print("Rock ");
     }
 }
 

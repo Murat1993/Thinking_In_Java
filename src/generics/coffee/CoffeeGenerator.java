@@ -12,12 +12,15 @@ public class CoffeeGenerator implements Generator<Coffee>, Iterable<Coffee> {
 
     private Class[] types = { Latte.class, Mocha.class,
             Cappuccino.class, Americano.class, Breve.class, };
+
     private static Random random = new Random(47);
 
     public CoffeeGenerator() {
     }
+
     // Для перебора
     private int size = 0;
+
     public CoffeeGenerator(int sz) {
         size = sz;
     }

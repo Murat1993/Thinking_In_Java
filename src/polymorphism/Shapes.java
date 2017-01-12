@@ -5,7 +5,6 @@ package polymorphism;
 import polymorphism.shape.RandomShapeGenerator;
 import polymorphism.shape.Shape;
 
-import java.util.Random;
 
 public class Shapes {
     private static RandomShapeGenerator gen = new RandomShapeGenerator();

@@ -14,9 +14,11 @@ class Wind implements Instrument {
     public void play(Note n) {
         System.out.println(this + ".play()" + n);
     }
+
     public String toString() {
         return "Wind";
     }
+
     public void adjust() {
         System.out.println(this + ".adjust()");
     }
@@ -26,9 +28,11 @@ class Percussion implements Instrument {
     public void play(Note n) {
         System.out.println(this + ".play()" + n);
     }
+
     public String toString() {
         return "Percussion";
     }
+
     public void adjust() {
         System.out.println(this + ".adjust()");
     }
@@ -38,9 +42,11 @@ class Stringed implements Instrument {
     public void play(Note n) {
         System.out.println(this + ".play()" + n);
     }
+
     public String toString() {
         return "Stringed";
     }
+
     public void adjust() {
         System.out.println(this + ".adjust()");
     }

@@ -3,6 +3,7 @@
 package generics;
 
 
+
 public class LinkedStack<T> {
 
     private static class Node<U> {
@@ -25,7 +26,7 @@ public class LinkedStack<T> {
     private Node<T> top = new Node<>(); // Предохранитель
 
     public void push(T item) {
-        top = new Node<T>(item, top);
+        top = new Node<>(item, top);
     }
 
     public T pop() {
@@ -37,6 +38,7 @@ public class LinkedStack<T> {
     }
 
     public static void main(String[] args) {
+
         LinkedStack<String> lss = new LinkedStack<>();
         for (String s : "Phasers on stun!".split(" ")) {
             lss.push(s);

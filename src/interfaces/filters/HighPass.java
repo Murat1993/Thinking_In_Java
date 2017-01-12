@@ -1,4 +1,4 @@
-//: intefaces/filters/HighPass.java
+//: interfaces/filters/HighPass.java
 package interfaces.filters;
 
 

@@ -1,7 +1,7 @@
-package interfaces.music4;
-
 //: interfaces/music4/Music4.java
 // Абстрактные классы и методы
+
+package interfaces.music4;
 
 import polymorphism.music.Note;
 

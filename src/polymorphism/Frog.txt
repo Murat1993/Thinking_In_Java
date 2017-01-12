@@ -1,0 +1,35 @@
+Создаем Characteristic живое существо
+Создаем Description обычное живое существо
+LivingCreature()
+
+Создаем Characteristic имеет сердце
+Создаем Description животное, не растение
+Animal()
+
+Создаем Characteristic может жить в воде
+Создаем Description и в воде, и на земле
+Amphibian()
+
+
+Создаем Characteristic квакает
+Создаем Description ест жуков
+Frog()
+
+Пока!
+
+завершение Frog
+Завершаем Description ест жуков
+Завершаем Characteristic квакает
+
+dispose в Amphibian
+Завершаем Description и в воде, и на земле
+Завершаем Characteristic может жить в воде
+
+dispose() в Animal
+Завершаем Description животное, не растение
+Завершаем Characteristic имеет сердце
+
+dispose() в LivingCreature
+Завершаем Description обычное живое существо
+Завершаем Characteristic живое существо
+

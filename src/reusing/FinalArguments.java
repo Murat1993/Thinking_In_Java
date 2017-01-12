@@ -3,7 +3,8 @@
 package reusing;
 
 class Gizmo {
-    public void spin() {}
+    public void spin() {
+    }
 }
 
 public class FinalArguments {
@@ -11,6 +12,7 @@ public class FinalArguments {
         //! g = new Gizmo(); // запрещено -- g обьявлено final
         g.spin();
     }
+
     void without(Gizmo g) {
         g = new Gizmo(); // Разрешено -- g не являеться final
         g.spin();

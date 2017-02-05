@@ -1,23 +1,20 @@
-package concurrency;
-
 //: concurrency/LiftOff.java
 // Реализация интерфейса Runnable.
+package concurrency;
 
 public class LiftOff implements Runnable {
 
-    protected int countDown = 10; // Значение по умолчанию
     private static int taskCount = 0;
-
     private final int id = taskCount++;
+    protected int countDown = 10; // Значение по умолчанию
 
 
-    public LiftOff() {}
+    public LiftOff() {
+    }
 
-//    public LiftOff(int countDown) {
-//
-//        this.countDown = countDown;
-//
-//    }
+    public LiftOff(int countDown) {
+        this.countDown = countDown;
+    }
 
     public String status() {
         return "#" + id + "(" + (countDown > 0 ? countDown : "Liftoff!") + "), ";

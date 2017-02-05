@@ -19,9 +19,11 @@ class House {
     }
 
     Window w2 = new Window(2); // После конструктора
+
     void f() {
         System.out.println("f()");
     }
+
     Window w3 = new Window(3); // В конце
 }
 

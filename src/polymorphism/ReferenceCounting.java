@@ -4,9 +4,9 @@ package polymorphism;
 
 
 class Shared {
-    private int refcount = 0;
     private static long counter = 0;
     private final long id = counter++;
+    private int refcount = 0;
 
     public Shared() {
         System.out.println("Создаем " + this);
@@ -27,10 +27,11 @@ class Shared {
     }
 }
 
+
 class Composing {
-    private Shared shared;
     private static long counter = 0;
     private final long id = counter++;
+    private Shared shared;
 
     public Composing(Shared shared) {
         System.out.println("Создаем " + this);

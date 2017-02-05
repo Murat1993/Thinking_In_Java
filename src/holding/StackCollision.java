@@ -13,10 +13,12 @@ public class StackCollision {
             System.out.println(stack.pop() + " ");
 
         System.out.println();
+
+
         java.util.Stack<String> stack2 =
                 new java.util.Stack<>();
         for (String s : "My dog has fleas".split(" "))
-            stack.push(s);
+            stack2.push(s);
 
         while (!stack2.empty())
             System.out.println(stack2.pop() + " ");

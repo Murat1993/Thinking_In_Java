@@ -15,14 +15,18 @@ public class ListIteration {
 
         while (it.hasNext())
             System.out.print(it.next() + ", " + it.nextIndex() +
-                                ", " + it.previousIndex() + "; ");
+                    ", " + it.previousIndex() + "; ");
         System.out.println();
+
+
         // В обратном направлении:
         while (it.hasPrevious()) {
             System.out.print(it.previous().id() + " ");
         }
+
         System.out.println();
         System.out.println(pets);
+
 
         it = pets.listIterator(3);
         while (it.hasNext()) {

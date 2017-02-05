@@ -1,12 +1,14 @@
 //: interfaces/music5/Music5.java
 // Интерфейсы.
 package interfaces.music5;
+
 import polymorphism.music.Note;
 
 interface Instrument {
     // Константа времени компиляции:
     int VALUE = 5; // static & final
-    // Определние методов недопустимы:
+
+    // Определение методов недопустимы:
     void play(Note n); // Автоматически обьявлен как public
 }
 
@@ -70,10 +72,12 @@ public class Music5 {
     static void tune(Instrument i) {
         i.play(Note.MIDDLE_C);
     }
+
     static void tuneAll(Instrument[] e) {
         for (Instrument i : e)
             tune(i);
     }
+
     public static void main(String[] args) {
         // Восходящее преобразование при добавлении в массив:
         Instrument[] orchestra = {

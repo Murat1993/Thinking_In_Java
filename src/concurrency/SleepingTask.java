@@ -8,12 +8,20 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 public class SleepingTask extends LiftOff {
+    public static void main(String[] args) {
+        ExecutorService exec = Executors.newCachedThreadPool();
+        for (int i = 0; i < 5; i++) {
+            exec.execute(new SleepingTask());
+        }
+        exec.shutdown();
+    }
+
     public void run() {
         try {
             while (countDown-- > 0) {
                 System.out.println(status());
                 // Старый стиль.
-                // Thread.sleep(100);
+                Thread.sleep(1000);
                 // Стиль Java SE5/6:
                 TimeUnit.MICROSECONDS.sleep(100);
             }
@@ -21,13 +29,5 @@ public class SleepingTask extends LiftOff {
             e.printStackTrace();
             System.err.println("Interrupted");
         }
-    }
-
-    public static void main(String[] args) {
-        ExecutorService exec = Executors.newCachedThreadPool();
-        for (int i = 0; i < 5; i++) {
-            exec.execute(new SleepingTask());
-        }
-        exec.shutdown();
     }
 }

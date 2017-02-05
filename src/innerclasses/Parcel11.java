@@ -47,11 +47,11 @@ public class Parcel11 {
         static class AnotherLevel {
             static int x = 10;
 
-            public static class Another {
-
+            public static void f() {
             }
 
-            public static void f() {
+            public static class AndAnother {
+
             }
         }
     }

@@ -4,6 +4,7 @@ package reusing;
 
 class Soap {
     private String s;
+
     Soap() {
         System.out.println("Soap()");
         s = "Constructed";
@@ -24,15 +25,22 @@ public class Bath {
     private int i;
     private float toy;
 
+    // Инициализация экземпляра
+    {
+        i = 47;
+    }
+
     public Bath() {
         System.out.println("В кострукторе Bath()");
         s3 = "Радостный";
         toy = 3.14f;
         castille = new Soap();
     }
-    // Инициализация экземпляра
-    { i = 47; }
 
+    public static void main(String[] args) {
+        Bath b = new Bath();
+        System.out.println(b);
+    }
 
     @Override
     public String toString() {
@@ -41,17 +49,12 @@ public class Bath {
 
         return
                 "s1 = " + s1 + "\n" +
-                "s2 = " + s2 + "\n" +
-                "s3 = " + s3 + "\n" +
-                "s4 = " + s4 + "\n" +
-                "i = " + i + "\n" +
-                "toy = " + toy + "\n" +
-                "castille = " + castille;
-    }
-
-    public static void main(String[] args) {
-        Bath b = new Bath();
-        System.out.println(b);
+                        "s2 = " + s2 + "\n" +
+                        "s3 = " + s3 + "\n" +
+                        "s4 = " + s4 + "\n" +
+                        "i = " + i + "\n" +
+                        "toy = " + toy + "\n" +
+                        "castille = " + castille;
     }
 }
 

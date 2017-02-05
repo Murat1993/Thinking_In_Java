@@ -4,6 +4,7 @@ package reusing;
 
 class Game {
     Game(int i) {
+        System.out.println(i);
         System.out.println("Конструктор Game");
     }
 }

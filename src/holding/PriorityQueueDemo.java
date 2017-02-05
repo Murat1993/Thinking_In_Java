@@ -32,13 +32,16 @@ public class PriorityQueueDemo {
         PriorityQueue<String> stringsPQ = new PriorityQueue<>(strings);
         QueueDemo.printQ(stringsPQ);
 
+
         stringsPQ = new PriorityQueue<>(strings.size(), Collections.<String>reverseOrder());
         stringsPQ.addAll(strings);
         QueueDemo.printQ(stringsPQ);
 
+
         Set<Character> charSet = new HashSet<>();
         for (char c : fact.toCharArray())
             charSet.add(c); // Автоматическая упаковка
+
 
         PriorityQueue<Character> characterPQ = new PriorityQueue<>(charSet);
         QueueDemo.printQ(characterPQ);

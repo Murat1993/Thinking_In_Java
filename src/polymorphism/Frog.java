@@ -48,9 +48,11 @@ class LivingCreature {
 class Animal extends LivingCreature {
     private Characteristic p = new Characteristic("имеет сердце");
     private Description t = new Description("животное, не растение");
+
     Animal() {
         System.out.println("Animal()");
     }
+
     protected void dispose() {
         System.out.println("dispose() в Animal");
         t.dispose();
@@ -81,8 +83,15 @@ class Amphibian extends Animal {
 public class Frog extends Amphibian {
     private Characteristic p = new Characteristic("квакает");
     private Description t = new Description("ест жуков");
+
     public Frog() {
         System.out.println("Frog()");
+    }
+
+    public static void main(String[] args) {
+        Frog frog = new Frog();
+        System.out.println("Пока!");
+        frog.dispose();
     }
 
     protected void dispose() {
@@ -90,12 +99,6 @@ public class Frog extends Amphibian {
         t.dispose();
         p.dispose();
         super.dispose();
-    }
-
-    public static void main(String[] args) {
-        Frog frog = new Frog();
-        System.out.println("Пока!");
-        frog.dispose();
     }
 }
 

@@ -13,6 +13,7 @@ public class SetOfInteger {
 
         for (int i = 0; i < 10000; i++)
             intset.add(random.nextInt(30));
+
         System.out.println(intset);
     }
 }

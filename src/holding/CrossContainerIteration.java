@@ -1,11 +1,13 @@
 //: holding/CrossContainerIteration.java
 package holding;
 
-import typeinfo.pets.*;
+import typeinfo.pets.Pet;
+import typeinfo.pets.Pets;
 
 import java.util.*;
 
 public class CrossContainerIteration {
+
     public static void display(Iterator<Pet> it) {
         while (it.hasNext()) {
             Pet p = it.next();

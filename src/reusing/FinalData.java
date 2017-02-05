@@ -1,5 +1,5 @@
 //: reusing/FinalData.java
-// Действие ключчевого слова final для полей.
+// Действие ключевого слова final для полей.
 package reusing;
 
 import java.util.Random;
@@ -49,9 +49,9 @@ public class FinalData {
         for (int i = 0; i < fd1.a.length; i++) {
             fd1.a[i]++; // Обект не является неизменным!
         }
-        //! fd1 v2 = new Value(0);    // Ошибка ссылку
-        //! fd1 VAL_3 = new Value(1); // нельзя изменить
-        //! fd1 a = new int[3];
+        //! fd1.v2 = new Value(0);    // Ошибка ссылку
+        //! fd1.VAL_3 = new Value(1); // нельзя изменить
+        //! fd1.a = new int[3];
         System.out.println(fd1);
         System.out.println("Создаем FinalData");
         FinalData fd2 = new FinalData("fd2");

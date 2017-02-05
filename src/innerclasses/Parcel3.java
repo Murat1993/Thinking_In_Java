@@ -7,13 +7,13 @@ public class Parcel3 {
 
     class Contents {
         private int i = 11;
+
         public int value() {
             return i;
         }
     }
 
     class Destination {
-
         private String label;
 
         Destination(String whereTo) {

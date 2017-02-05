@@ -22,12 +22,13 @@ public class QueueDemo {
             queue.offer(random.nextInt(i + 10));
 
         printQ(queue);
+
         Queue<Character> qc = new LinkedList<>();
         for (char c : "Brontosaurus".toCharArray()) {
             qc.offer(c);
-            //System.out.print(c);
+            System.out.print(c);
         }
         System.out.println(qc);
-        //printQ(qc);
+        printQ(qc);
     }
 }

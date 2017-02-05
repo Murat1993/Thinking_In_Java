@@ -10,6 +10,12 @@ public class SelfManaged implements Runnable {
         t.start();
     }
 
+    public static void main(String[] args) {
+        for (int i = 0; i < 5; i++) {
+            new SelfManaged();
+        }
+    }
+
     public String toString() {
         return Thread.currentThread().getName() + "(" + countDown + "), ";
     }
@@ -20,12 +26,6 @@ public class SelfManaged implements Runnable {
             System.out.println(this);
             if (--countDown == 0)
                 return;
-        }
-    }
-
-    public static void main(String[] args) {
-        for (int i = 0; i < 5; i++) {
-            new SelfManaged();
         }
     }
 }

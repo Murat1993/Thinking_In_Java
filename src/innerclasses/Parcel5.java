@@ -12,6 +12,7 @@ public class Parcel5 {
     }
 
     public Destination dest(String s) {
+
         class PDestination implements Destination {
             private String label;
 

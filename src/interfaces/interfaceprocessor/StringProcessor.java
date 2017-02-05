@@ -6,12 +6,6 @@ import java.util.Arrays;
 
 public abstract class StringProcessor implements Processor {
 
-    public String name() {
-        return getClass().getSimpleName();
-    }
-
-    public abstract String process(Object input);
-
     public static String s =
             "If she weighs the same as a duck, she's made of wood";
 
@@ -20,6 +14,12 @@ public abstract class StringProcessor implements Processor {
         Apply.process(new Downcase(), s);
         Apply.process(new Splitter(), s);
     }
+
+    public String name() {
+        return getClass().getSimpleName();
+    }
+
+    public abstract String process(Object input);
 }
 
 class Upcase extends StringProcessor {

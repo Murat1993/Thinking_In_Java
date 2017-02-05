@@ -5,7 +5,7 @@ import interfaces.filters.*;
 
 class FilterAdapter implements Processor {
 
-    Filter filter;
+    private Filter filter;
 
 
     public FilterAdapter(Filter filter) {

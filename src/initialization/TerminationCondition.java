@@ -6,6 +6,7 @@ package initialization;
 
 class Book {
     boolean checkedOut = false;
+
     Book(boolean checkOut) {
         checkedOut = checkOut;
     }
@@ -17,9 +18,9 @@ class Book {
     protected void finalize() {
         if (checkedOut) {
             System.out.println("Error: checked out");
-            // Обычно это делается так-:
-            // super.finalize();  // Вызов версии базового класса
         }
+        // Обычно это делается так-:
+        // super.finalize();  // Вызов версии базового класса
     }
 }
 

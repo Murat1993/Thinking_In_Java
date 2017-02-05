@@ -6,6 +6,7 @@ class Shape {
     Shape(int i) {
         System.out.println("Конструктор Shape");
     }
+
     void dispose() {
         System.out.println("Завершение Shape");
     }
@@ -16,6 +17,7 @@ class Circle extends Shape {
         super(i);
         System.out.println("Рисуем окружность Circle");
     }
+
     void dispose() {
         System.out.println("Стираем окружность Circle");
         super.dispose();
@@ -36,6 +38,7 @@ class Triangle extends Shape {
 
 class Line extends Shape {
     private int start, end;
+
     Line(int start, int end) {
         super(start);
         this.start = start;
@@ -57,11 +60,20 @@ public class CADSystem extends Shape {
     public CADSystem(int i) {
         super(i + 1);
         for (int j = 0; j < lines.length; j++) {
-            lines[j] = new Line(j, j*j);
+            lines[j] = new Line(j, j * j);
         }
         c = new Circle(1);
         t = new Triangle(1);
         System.out.println("Комбинированный конструктор");
+    }
+
+    public static void main(String[] args) {
+        CADSystem x = new CADSystem(47);
+        try {
+            // Код и обработка исключений.
+        } finally {
+            x.dispose();
+        }
     }
 
     void dispose() {
@@ -74,15 +86,6 @@ public class CADSystem extends Shape {
             lines[i].dispose();
         }
         super.dispose();
-    }
-
-    public static void main(String[] args) {
-        CADSystem x = new CADSystem(47);
-        try {
-            // Код и обработка исключений.
-        } finally {
-            x.dispose();
-        }
     }
 
 }

@@ -1,8 +1,15 @@
 //: innerclasses/TestParcel.java
 package innerclasses;
 
-
 class Parcel4 {
+    public Destination destination(String s) {
+        return new PDestination(s);
+    }
+
+    public Contents contents() {
+        return new PContents();
+    }
+
     private class PContents implements Contents {
         private int i = 11;
 
@@ -25,14 +32,6 @@ class Parcel4 {
             return label;
         }
     }
-
-    public Destination destination(String s) {
-        return new PDestination(s);
-    }
-
-    public Contents contents() {
-        return new PContents();
-    }
 }
 
 public class TestParcel {
@@ -42,5 +41,6 @@ public class TestParcel {
         Destination d = p.destination("Тасмания");
         // Запрещено - нет доступа к private-классу:
         //! Parcel4.PContents pc = p.new PContents();
+        //! Parcel4.PDestination pDestination = p.new PDestination("America");
     }
 }

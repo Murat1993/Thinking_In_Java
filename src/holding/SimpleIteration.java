@@ -22,6 +22,7 @@ public class SimpleIteration {
         for (Pet p : pets)
             System.out.print(p.id() + ":" + p + " ");
         System.out.println();
+
         // Итератор также способен удалять элементы:
         it = pets.iterator();
         for (int i = 0; i < 6; i++) {

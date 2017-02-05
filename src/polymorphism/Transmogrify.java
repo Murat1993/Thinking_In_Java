@@ -4,7 +4,8 @@
 package polymorphism;
 
 class Actor {
-    public void act() {}
+    public void act() {
+    }
 }
 
 class HappyActor extends Actor {
@@ -21,9 +22,11 @@ class SadActor extends Actor {
 
 class Stage {
     private Actor actor = new HappyActor();
+
     public void change() {
         actor = new SadActor();
     }
+
     public void performPlay() {
         actor.act();
     }

@@ -25,6 +25,7 @@ public class Mugs {
     Mugs() {
         System.out.println("Mugs()");
     }
+
     Mugs(int i) {
         System.out.println("Mugs(int)");
     }

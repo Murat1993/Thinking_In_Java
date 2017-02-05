@@ -34,5 +34,6 @@ public class CovariantReturn {
         System.out.println(g);
         m = new WheatMill();
         g = m.process();
+        System.out.println(g);
     }
 }

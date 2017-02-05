@@ -6,8 +6,6 @@ package innerclasses;
 public class DotNew {
     private String anotherString;
 
-
-
     public class Inner {
         private String id;
 

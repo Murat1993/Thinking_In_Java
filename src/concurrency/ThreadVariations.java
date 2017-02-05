@@ -3,9 +3,9 @@ package concurrency;
 //: concurrency/ThreadVariations.java
 // Создание потоков с использованием внутренних классов..
 
-
 import java.util.concurrent.TimeUnit;
 
+// Using a named inner class:
 class InnerThread1 {
     private int countDown = 5;
     private Inner inner;
@@ -19,8 +19,8 @@ class InnerThread1 {
         public void run() {
             try {
                 while (true) {
-                    System.out.println(this);
                     if (--countDown == 0) return;
+                    System.out.println(this);
                     sleep(10);
                 }
             } catch (InterruptedException e) {
@@ -39,8 +39,8 @@ class InnerThread1 {
     }
 }
 
-// Используем безымянный внутренний класс::
 
+// Используем безымянный внутренний класс::
 class InnerThread2 {
     private int countDown = 5;
     private Thread t;

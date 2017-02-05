@@ -1,5 +1,5 @@
 //: holding/Statistics.java
-// Простой пример использовани HashMap
+// Простой пример использования HashMap
 package holding;
 
 
@@ -14,12 +14,15 @@ public class Statistics {
 
         for (int i = 0; i < 10000; i++) {
             // Получение случайного числа от 0 до 20.
-            int r = random.nextInt();
+            int r = random.nextInt(20);
             Integer freq = m.get(r);
             m.put(r, freq == null ? 1 : freq + 1);
         }
 
         System.out.println(m);
-    }
 
+        for (Map.Entry pair : m.entrySet()) {
+            System.out.println(pair.getKey() + " : " + pair.getValue());
+        }
+    }
 }

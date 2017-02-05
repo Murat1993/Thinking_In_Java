@@ -19,7 +19,7 @@ public class SetOperations {
 
         Collections.addAll(set2, "H I J K L".split(" "));
 
-        System.out.println("set2 in set1" + set1.containsAll(set2));
+        System.out.println("set2 in set1 " + set1.containsAll(set2));
 
         set1.remove("H");
 

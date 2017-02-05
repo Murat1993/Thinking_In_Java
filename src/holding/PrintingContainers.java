@@ -1,6 +1,6 @@
-//: c11:PrintingContainers.java
+//: holding:PrintingContainers.java
 // Вывод контейнеров по умолчанию
-package c11;
+package holding;
 import java.util.*;
 
 
@@ -22,9 +22,12 @@ public class PrintingContainers {
     public static void main(String[] args) {
         System.out.println(fill(new ArrayList<String>()));
         System.out.println(fill(new LinkedList<String>()));
+
         System.out.println(fill(new HashMap<String, String>()));
+
         System.out.println(fill(new TreeSet<String>()));
         System.out.println(fill(new LinkedHashSet<String>()));
+
         System.out.println(fill(new HashMap<String, String>()));
         System.out.println(fill(new TreeMap<String, String>()));
         System.out.println(fill(new LinkedHashMap<String, String>()));

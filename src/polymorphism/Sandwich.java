@@ -3,10 +3,14 @@
 package polymorphism;
 
 
-class Meal{
+class Meal {
     Meal() {
         System.out.println("Meal()");
     }
+
+//    Meal(int i) {
+//        System.out.println("!");
+//    }
 }
 
 class Bread {
@@ -29,6 +33,7 @@ class Lettuce {
 
 class Lunch extends Meal {
     Lunch() {
+        // super(1);
         System.out.println("Lunch()");
     }
 }
@@ -43,6 +48,7 @@ public class Sandwich extends PortableLunch {
     private Bread b = new Bread();
     private Cheese c = new Cheese();
     private Lettuce l = new Lettuce();
+
     public Sandwich() {
         System.out.println("Sandwich()");
     }

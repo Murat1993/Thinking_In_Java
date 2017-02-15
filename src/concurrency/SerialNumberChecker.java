@@ -11,6 +11,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+// Reuses storage so we don't run out of memory:
 class CircularSet {
     private int[] array;
     private int len;
@@ -61,6 +62,8 @@ public class SerialNumberChecker {
         for (int i = 0; i < SIZE; i++) {
             exec.execute(new SerialChecker());
         }
+
+
         // Остановиться после n секунд при наличии аргумента:
         if (args.length > 0) {
             TimeUnit.SECONDS.sleep(new Integer(args[0]));

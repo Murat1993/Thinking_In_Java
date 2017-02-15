@@ -12,13 +12,13 @@ public class AtomicIntegerTest implements Runnable {
     private int j = 0;
 
     public synchronized int getValue() {
-        return j; //i.get();
+        return i.get(); // return j
     }
 
     private synchronized void evenIncrement() {
-        //i.addAndGet(2);
-        j++;
-        j++;
+        i.addAndGet(2);
+        //j++;
+        //j++;
     }
 
     @Override
@@ -41,6 +41,7 @@ public class AtomicIntegerTest implements Runnable {
         ExecutorService exec = Executors.newCachedThreadPool();
         AtomicIntegerTest ait = new AtomicIntegerTest();
         exec.execute(ait);
+
         while (true) {
             int val = ait.getValue();
             if (val % 2 != 0) {

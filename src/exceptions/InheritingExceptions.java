@@ -1,5 +1,5 @@
 // exceptions/InheritingExceptions.java
-// Cоздание собственного исключения
+// Создание собственного исключения
 package exceptions;
 
 class SimpleException extends Exception {}

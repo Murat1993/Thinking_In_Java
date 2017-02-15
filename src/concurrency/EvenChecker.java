@@ -1,29 +1,18 @@
+//: concurrency/EvenChecker.java
 package concurrency;
 
-//: concurrency/EvenChecker.java
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class EvenChecker implements Runnable {
 
-    private IntGenerator generator;
     private final int id;
+    private IntGenerator generator;
 
-    public EvenChecker(IntGenerator g, int ident) {
-        generator = g;
+    public EvenChecker(IntGenerator intGenerator, int ident) {
+        generator = intGenerator;
         id = ident;
-    }
-
-    public void run() {
-        while (!generator.isCanceled()) {
-            int val = generator.next();
-            //System.out.println("val = " + val);
-            if (val % 2 != 0) {
-                System.out.println(val + " not even!");
-                generator.cancel(); // // Отмена всех EvenChecker
-            }
-        }
     }
 
     // Тестирование произвольного типа IntGenerator:
@@ -38,7 +27,18 @@ public class EvenChecker implements Runnable {
 
     // Значение по умолчанию для count:
     public static void test(IntGenerator gp) {
-           test(gp, 50);
+        test(gp, 50);
+    }
+
+    public void run() {
+        while (!generator.isCanceled()) {
+            int val = generator.next();
+            //System.out.println("val = " + val);
+            if (val % 2 != 0) {
+                System.out.println(val + " not even!");
+                generator.cancel(); // // Отмена всех EvenChecker
+            }
+        }
     }
 
 }

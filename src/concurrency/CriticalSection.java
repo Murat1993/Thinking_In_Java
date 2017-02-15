@@ -158,15 +158,18 @@ public class CriticalSection {
         PairChecker
                 pairChecker1 = new PairChecker(pman1),
                 pairChecker2 = new PairChecker(pman2);
+
         exec.execute(pm1);
         exec.execute(pm2);
         exec.execute(pairChecker1);
         exec.execute(pairChecker2);
+
         try {
             TimeUnit.MILLISECONDS.sleep(500);
         } catch (InterruptedException e) {
             System.out.println("Sleep interrupted");
         }
+
         System.out.println("pm1: " + pm1 + "\npm2: " + pm2);
         System.exit(0);
     }

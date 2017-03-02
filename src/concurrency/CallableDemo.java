@@ -14,6 +14,7 @@ class TaskWithResult implements Callable<String> {
 
     @Override
     public String call() throws Exception {
+        Thread.sleep(1500);
         return "result of TaskWithResult " + id;
     }
 }

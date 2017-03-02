@@ -29,6 +29,7 @@ public class Rethrowing {
             throw (Exception) e.fillInStackTrace();
         }
     }
+
     public static void main(String[] args) {
 
         try {

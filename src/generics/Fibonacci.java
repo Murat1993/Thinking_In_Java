@@ -6,6 +6,7 @@ import net.mindview.util.Generator;
 
 public class Fibonacci implements Generator<Integer> {
     private int count = 0;
+
     public Integer next() {
         return fib(count++);
     }

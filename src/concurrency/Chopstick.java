@@ -1,4 +1,4 @@
-package concurrency.waxomatic;
+package concurrency;
 
 //: concurrency/Chopstick.java
 // Палочки для обедающих философов.

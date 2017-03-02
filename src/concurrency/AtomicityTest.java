@@ -19,6 +19,8 @@ public class AtomicityTest implements Runnable {
             if (0 != val % 2) {
                 System.out.println(val);
                 System.exit(0);
+            } else {
+                System.out.println(".");
             }
         }
     }

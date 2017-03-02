@@ -10,8 +10,9 @@ import java.util.Random;
 
 public class CoffeeGenerator implements Generator<Coffee>, Iterable<Coffee> {
 
-    private Class[] types = { Latte.class, Mocha.class,
-            Cappuccino.class, Americano.class, Breve.class, };
+
+    private Class[] types = {Latte.class, Mocha.class,
+            Cappuccino.class, Americano.class, Breve.class,};
 
     private static Random random = new Random(47);
 

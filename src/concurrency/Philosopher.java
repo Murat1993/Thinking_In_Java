@@ -1,4 +1,4 @@
-package concurrency.waxomatic;
+package concurrency;
 
 //: concurrency/Philosopher.java
 // Обедающий философ
@@ -13,6 +13,7 @@ public class Philosopher implements Runnable {
     private final int id;
     private final int ponderFactor;
     private Random rand = new Random(47);
+
     private void pause() throws InterruptedException {
         if (ponderFactor == 0) return;
         TimeUnit.MILLISECONDS.sleep(rand.nextInt(ponderFactor * 250));

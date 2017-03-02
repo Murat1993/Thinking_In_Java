@@ -6,6 +6,7 @@ package exceptions;
 public class WhoCalled {
     static void f() {
         // Выдача исключения для заполнения трассировочных данных
+        // Generate an exception to fill in the stack trace
         try {
             throw new Exception();
         } catch (Exception e) {
@@ -15,12 +16,15 @@ public class WhoCalled {
             }
         }
     }
+
     static void g() {
         f();
     }
+
     static void h() {
         g();
     }
+
     public static void main(String[] args) {
         f();
         System.out.println("---------------------------------");

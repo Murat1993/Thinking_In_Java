@@ -20,6 +20,7 @@ public class RethrowNew {
         System.out.println("создание исключения в f()");
         throw new OneException("из f()");
     }
+
     public static void main(String[] args) {
         try {
             try {

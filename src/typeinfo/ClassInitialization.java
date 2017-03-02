@@ -43,7 +43,9 @@ public class ClassInitialization {
         // Приводит к инициалиации
         System.out.println(Initable2.staticNonFinal);
         System.out.println();
+
         Class initable3 = Class.forName("typeinfo.Initable3");
+
         System.out.println("После создания ссылки Initable3");
         System.out.println(Initable3.staticNonFinal);
     }

@@ -1,6 +1,6 @@
-//: typeinfo/ToyTest.java
+//: typeinfo/toys/ToyTest.java
 // Тестирование класса Class.
-package typeinfo;
+package typeinfo.toys;
 
 interface HasBatteries {
 }
@@ -43,7 +43,7 @@ public class ToyTest {
     public static void main(String[] args) {
         Class c = null;
         try {
-            c = Class.forName("typeinfo.FancyToy");
+            c = Class.forName("typeinfo.toys.FancyToy");
         } catch (ClassNotFoundException e) {
             System.out.println("Не найден класс FancyToy");
             System.exit(1);

@@ -11,11 +11,11 @@ public class AtomicIntegerTest implements Runnable {
     private AtomicInteger i = new AtomicInteger(0);
     private int j = 0;
 
-    public synchronized int getValue() {
+    public int getValue() { // add synchronized if wanna check with j
         return i.get(); // return j
     }
 
-    private synchronized void evenIncrement() {
+    private void evenIncrement() { // add synchronized if wanna check with j
         i.addAndGet(2);
         //j++;
         //j++;

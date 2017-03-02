@@ -4,7 +4,9 @@ package exceptions;
 
 class MyException2 extends Exception {
     private int x;
+
     public MyException2() {}
+
     public MyException2(String msg) {
         super(msg);
     }
@@ -27,6 +29,7 @@ public class ExtraFeatures {
         System.out.println("MyException2 в f()");
         throw new MyException2();
     }
+
     public static void g() throws MyException2 {
         System.out.println("MyException2 в g()");
         throw new MyException2("Возбуждено в g()");
@@ -36,7 +39,6 @@ public class ExtraFeatures {
         System.out.println("MyException2 в h()");
         throw new MyException2("Возбуждено в h()", 47);
     }
-
 
     public static void main(String[] args) {
         try {

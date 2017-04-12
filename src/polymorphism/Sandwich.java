@@ -4,9 +4,9 @@ package polymorphism;
 
 
 class Meal {
-    Meal() {
-        System.out.println("Meal()");
-    }
+//    Meal() {
+//        System.out.println("Meal()");
+//    }
 
 //    Meal(int i) {
 //        System.out.println("!");
@@ -33,7 +33,7 @@ class Lettuce {
 
 class Lunch extends Meal {
     Lunch() {
-        // super(1);
+//        super(2);
         System.out.println("Lunch()");
     }
 }

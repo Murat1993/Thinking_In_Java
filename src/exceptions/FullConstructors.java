@@ -3,6 +3,7 @@ package exceptions;
 
 class MyException extends Exception {
     public MyException() {}
+
     public MyException(String msg) {
         super(msg);
     }
@@ -25,6 +26,7 @@ public class FullConstructors {
         } catch (MyException e) {
             e.printStackTrace(System.err);
         }
+
         try {
             g();
         } catch (MyException e) {

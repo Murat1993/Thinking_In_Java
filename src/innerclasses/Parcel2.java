@@ -3,6 +3,7 @@ package innerclasses;
 public class Parcel2 {
     class Contents {
         private int i = 11;
+
         public int value() {
             return i;
         }
@@ -10,6 +11,7 @@ public class Parcel2 {
 
     class Destination {
         private String label;
+
         Destination(String whereTo) {
             label = whereTo;
         }
@@ -42,5 +44,4 @@ public class Parcel2 {
         Parcel2.Contents c = q.contents();
         Parcel2.Destination d = q.to("Borneo");
     }
-
 }

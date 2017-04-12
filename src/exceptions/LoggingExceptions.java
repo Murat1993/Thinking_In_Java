@@ -1,4 +1,4 @@
-// exceptions/LoggingExceptions.java
+//: exceptions/LoggingExceptions.java
 // Регистрация исключения с использованием Logger
 package exceptions;
 
@@ -24,6 +24,7 @@ public class LoggingExceptions {
         } catch (LoggingException e) {
             System.err.println("Перехвачено " + e);
         }
+
         try {
             throw new LoggingException();
         } catch (LoggingException e) {

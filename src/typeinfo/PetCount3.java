@@ -2,7 +2,6 @@
 // Using isInstance()
 package typeinfo;
 
-
 import typeinfo.pets.LiteralPetCreator;
 import typeinfo.pets.Pet;
 

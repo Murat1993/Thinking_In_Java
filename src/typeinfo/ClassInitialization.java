@@ -6,6 +6,7 @@ import java.util.Random;
 class Initable {
     static final int staticFinal1 = 47;
     static final int staticFinal2 = ClassInitialization.rand.nextInt(1000);
+
     static {
         System.out.println("Инициализация Initable");
     }
@@ -13,6 +14,7 @@ class Initable {
 
 class Initable2 {
     static int staticNonFinal = 147;
+
     static {
         System.out.println("Инициализация Initable2");
     }
@@ -20,6 +22,7 @@ class Initable2 {
 
 class Initable3 {
     static int staticNonFinal = 74;
+
     static {
         System.out.println("Инициализация Initable3");
     }

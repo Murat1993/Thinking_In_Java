@@ -1,4 +1,4 @@
-// exceptions/Rethrowing.java
+//: exceptions/Rethrowing.java
 // Демострация метода fillInStackTrace()
 package exceptions;
 
@@ -17,6 +17,7 @@ public class Rethrowing {
             System.out.println("В методе g(), e.printStackTrace()");
             e.printStackTrace(System.out);
             throw e;
+//            throw new Exception();
         }
     }
 
@@ -32,12 +33,12 @@ public class Rethrowing {
 
     public static void main(String[] args) {
 
-        try {
-            g();
-        } catch (Exception e) {
-            System.out.println("main: printStackTrace()");
-            e.printStackTrace(System.out);
-        }
+//        try {
+//            g();
+//        } catch (Exception e) {
+//            System.out.println("main: printStackTrace()");
+//            e.printStackTrace(System.out);
+//        }
 
         try {
             h();

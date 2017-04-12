@@ -1,4 +1,4 @@
-// exceptions/InheritingExceptions.java
+//: exceptions/InheritingExceptions.java
 // Создание собственного исключения
 package exceptions;
 

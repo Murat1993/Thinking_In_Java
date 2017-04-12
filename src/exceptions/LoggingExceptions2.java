@@ -1,5 +1,5 @@
 //: exceptions/LoggingExceptions.java
-// Регистрация перехваченных исклюений.
+// Регистрация перехваченных исключений.
 package exceptions;
 
 

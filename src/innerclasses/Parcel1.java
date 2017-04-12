@@ -42,6 +42,5 @@ public class Parcel1 {
 
         Destination d = new Destination("To Java Guru");
         System.out.println(d.readLabel());
-
     }
 }

@@ -6,7 +6,7 @@ package exceptions;
 public class ExceptionMethods {
     public static void main(String[] args) {
         try {
-            throw new Exception("Мое исклюение");
+            throw new Exception("Мое исключение");
         } catch (Exception e) {
             System.out.println("Перехвачено");
             System.out.println("getMessage():" + e.getMessage());

@@ -1,18 +1,22 @@
-//: exceptions/DynamicFielsd.java
+//: exceptions/DynamicFields.java
 // Динамическое добавление полей в класс.
-// Пример использования цепоки ислючений.
+// Пример использования цепочки ислючений.
 package exceptions;
 
-class DynamicFieldsException extends Exception {}
+class DynamicFieldsException extends Exception {
+
+}
 
 public class DynamicFields {
     private Object[][] fields;
+
     public DynamicFields(int initialSize) {
         fields = new Object[initialSize][2];
         for (int i = 0; i < initialSize; i++) {
             fields[i] = new Object[] {null, null};
         }
     }
+
     public String toString() {
         StringBuilder result = new StringBuilder();
         for (Object[] obj: fields) {
@@ -23,6 +27,7 @@ public class DynamicFields {
         }
         return result.toString();
     }
+
     private int hasField(String id) {
         for (int i = 0; i < fields.length; i++) {
             if (id.equals(fields[i][0]))
@@ -30,18 +35,21 @@ public class DynamicFields {
         }
         return -1;
     }
+
     private int getFieldNumber(String id) throws NoSuchFieldException {
         int fieldNum = hasField(id);
         if (fieldNum == -1)
             throw new NoSuchFieldException();
         return fieldNum;
     }
+
     private int makeField(String id) {
         for (int i = 0; i < fields.length; i++)
             if (fields[i][0] == null) {
                 fields[i][0] = id;
                 return i;
             }
+
         // Пустых полей нет. Добавим новое:
         Object[][]tmp = new Object[fields.length + 1][2];
         for (int i = 0; i < fields.length; i++)
@@ -52,13 +60,15 @@ public class DynamicFields {
         // Рекурсивный вызов сновыми полями:
         return makeField(id);
     }
+
     public Object getField(String id) throws NoSuchFieldException {
         return fields[getFieldNumber(id)][1];
     }
+
     public Object setField(String id, Object value) throws DynamicFieldsException {
         if (value == null) {
-            // У большинства исклчений нет конструктора,
-            // принимающего обьект-<<причину>>.
+            // У большинства исключений нет конструктора,
+            // принимающего объект-<<причину>>.
             // В таких случаях следует использовать
             // метод initCause(), доступный всем подклассам
             // класса Throwable.
@@ -66,10 +76,12 @@ public class DynamicFields {
             dfe.initCause(new NullPointerException());
             throw dfe;
         }
+
         int fieldNumber = hasField(id);
         if (fieldNumber == -1)
             fieldNumber = makeField(id);
-        Object result = null;
+
+        Object result;
         try {
             result = getField(id); // Получаем старое значение
         } catch (NoSuchFieldException e) {
@@ -79,6 +91,7 @@ public class DynamicFields {
         fields[fieldNumber][1] = value;
         return result;
     }
+
     public static void main(String[] args) {
         DynamicFields df = new DynamicFields(3);
         System.out.println(df);
@@ -87,10 +100,12 @@ public class DynamicFields {
             df.setField("число", 47);
             df.setField("число2", 48);
             System.out.println(df);
+
             df.setField("d", "Новое значение");
             df.setField("число3", 11);
-            System.out.println("df: " + df);
-            System.out.println(df.getField("d\"))   " + df.getField("d")));
+            System.out.println("df: \n" + df);
+
+            System.out.println("df.getField(\"d\")) : " + df.getField("d"));
             Object field = df.setField("d", null); // Исключение
         } catch (NoSuchFieldException e) {
             e.printStackTrace(System.out);

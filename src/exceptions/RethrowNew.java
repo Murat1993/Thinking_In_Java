@@ -16,6 +16,7 @@ class TwoException extends Exception {
 }
 
 public class RethrowNew {
+
     public static void f() throws OneException {
         System.out.println("создание исключения в f()");
         throw new OneException("из f()");

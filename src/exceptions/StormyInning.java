@@ -6,9 +6,7 @@
 package exceptions;
 
 class BaseballException extends Exception {}
-
 class Foul extends BaseballException {}
-
 class Strike extends BaseballException {}
 
 abstract class Inning {
@@ -17,7 +15,7 @@ abstract class Inning {
 
     }
 
-    public void event() {
+    public void event() throws BaseballException {
         // Doesn't actually have to throw anything
     }
 
@@ -78,7 +76,7 @@ public class StormyInning extends Inning implements Storm {
             si.atBat();
         } catch (PopFoul e) {
             System.out.println("Pop foul");
-        } catch (RainedOut rainedOut) {
+        } catch (RainedOut e) {
             System.out.println("Rained out");
         } catch (BaseballException e) {
             System.out.println("Generic baseball exception");
@@ -86,7 +84,7 @@ public class StormyInning extends Inning implements Storm {
 
         // Strike not thrown in derived version.
         try {
-            // What happens if you pucast?
+            // What happens if you upcast?
             Inning i = new StormyInning();
             i.atBat();
             // You must catch the exceptions from the

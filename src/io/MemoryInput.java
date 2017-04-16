@@ -6,7 +6,7 @@ import java.io.StringReader;
 
 public class MemoryInput {
     public static void main(String[] args) throws IOException {
-        StringReader in = new StringReader(BufferedInputFile.read("Thinking_in_Java.iml"));
+        StringReader in = new StringReader(BufferedInputFile.read("src/io/MemoryInput.java"));
 
         int c;
         while ((c = in.read()) != -1) {

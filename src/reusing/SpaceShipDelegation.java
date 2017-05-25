@@ -5,6 +5,7 @@ package reusing;
 public class SpaceShipDelegation {
     private String name;
     private SpaceShipControls controls = new SpaceShipControls();
+
     public SpaceShipDelegation(String name) {
         this.name = name;
     }

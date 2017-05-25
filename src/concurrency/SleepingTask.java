@@ -21,7 +21,7 @@ public class SleepingTask extends LiftOff {
             while (countDown-- > 0) {
                 System.out.println(status());
                 // Старый стиль.
-                Thread.sleep(1000);
+                // Thread.sleep(1000);
                 // Стиль Java SE5/6:
                 TimeUnit.MICROSECONDS.sleep(100);
             }

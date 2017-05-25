@@ -54,6 +54,7 @@ public class PlaceSetting extends Custom {
     private Fork fork;
     private Knife knife;
     private DinnerPlate dinnerPlate;
+
     public PlaceSetting(int i) {
         super(i + 1);
         sp = new Spoon(i + 2);

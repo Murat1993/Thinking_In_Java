@@ -1,6 +1,6 @@
 package concurrency;
 
-//: concurrency/SimepleThread.java
+//: concurrency/SimpleThread.java
 // Прямое наследование от класса Thread..
 
 public class SimpleThread extends Thread {

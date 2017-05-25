@@ -32,6 +32,5 @@ public class GetChannel {
 
         while (buffer.hasRemaining())
             System.out.print((char)buffer.get());
-
     }
 }

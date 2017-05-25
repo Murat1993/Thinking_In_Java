@@ -14,7 +14,7 @@ class Daemon implements Runnable {
         for (int i = 0; i < t.length; i++) {
             t[i] = new Thread(new DaemonSpawn());
             t[i].start();
-            System.out.println("DaemonSpawn " + " started, ");
+            System.out.println("DaemonSpawn " + i + " started, ");
         }
 
         for (int i = 0; i < t.length; i++)
